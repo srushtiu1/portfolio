@@ -1026,7 +1026,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav-dropdown > .nav-link {
-  cursor: default;
+  cursor: pointer;
 }
 
 .nav-chevron {
@@ -1052,14 +1052,16 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu {
+.nav-dropdown:focus-within .nav-dropdown-menu,
+.nav-dropdown.is-open .nav-dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
 .nav-dropdown:hover .nav-chevron,
-.nav-dropdown:focus-within .nav-chevron {
+.nav-dropdown:focus-within .nav-chevron,
+.nav-dropdown.is-open .nav-chevron {
   transform: rotate(180deg);
 }
 

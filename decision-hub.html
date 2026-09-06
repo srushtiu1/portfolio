@@ -64,6 +64,29 @@
   
   });
   </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.nav-dropdown').forEach(function (dropdown) {
+      var toggle = dropdown.querySelector(':scope > .nav-link');
+      if (!toggle) return;
+
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var isOpen = dropdown.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
+
+    document.addEventListener('click', function () {
+      document.querySelectorAll('.nav-dropdown.is-open').forEach(function (d) {
+        d.classList.remove('is-open');
+        var t = d.querySelector(':scope > .nav-link');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+</script>
 <body class="case-decision">
 
 <div class="page">
@@ -74,7 +97,7 @@
       <div class="nav-name"><a href="index.html">SRUSHTI UPADHYAY</a></div>
       <div class="nav-links">
         <div class="nav-dropdown">
-          <a class="nav-link" aria-haspopup="true">
+          <a class="nav-link" aria-haspopup="true" aria-expanded="false" role="button" tabindex="0">
             Work
             <svg class="nav-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
               <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>

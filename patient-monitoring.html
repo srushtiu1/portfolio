@@ -96,7 +96,7 @@
 <div class="hero">
   <div class="hero-eyebrow">Healthcare Admin · Independent Build</div>
   <div class="hero-title">Patient Monitoring System</div>
-  <div class="hero-sub">A clinic system for patient records, billing, and check-in — designed and built solo, end to end,
+  <div class="hero-sub">A clinic system for patient records, billing, and check-in, designed and built solo, end to end,
     where the data model directly shaped the interface decisions.</div>
   <div class="hero-meta">
     <div class="hmi"><div class="hml">Client</div><div class="hmv">Care Plus Clinic</div></div>
@@ -118,7 +118,7 @@
   <div class="eyebrow">Overview</div>
   <div class="sec-title">A clinic running on paper, spreadsheets, and memory</div>
   <div class="body">Small private clinics often run on a mix of paper logs, spreadsheets, and memory, a receptionist tracking who's waited how long, a doctor reconstructing a patient's payment history by hand before writing a new bill. None of it is connected, and none of it scales past a handful of patients a day without someone quietly falling behind.</div>
-  <div class="body">This was a self-directed build, originally shipped in 2016: a single system covering patient records, billing, and check-in flow, designed for the two roles who'd actually use it day to day, the doctor and the receptionist.</div>
+  <div class="body">Originally shipped in 2016, it's a single system covering patient records, billing, and check-in flow, designed for the two roles who'd actually use it day to day, the doctor and the receptionist.</div>
 </div>
 
 <!-- RESPONSIBILITIES -->
@@ -155,7 +155,7 @@
         </svg>
       </div>
       <div class="skill-title">Billing Logic</div>
-      <div class="skill-body">Designing how partial and excess payments carry forward into the next billing cycle without manual reconciliation.</div>
+      <div class="skill-body">Designing how partial and excess payments resolve automatically, without a separate correction step.</div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">
@@ -204,7 +204,7 @@
   <div class="skills-grid mt28">
     <div class="skill-card">
       <div class="skill-title">Billing &amp; Payments</div>
-      <div class="skill-body">Bills and payments are tracked per patient, with partial or excess payments carried into the next cycle as a single running balance rather than a separate correction record. Designing the database schema myself is what made that possible — it's what let the interface show one number instead of a reconciliation screen.</div>
+      <div class="skill-body">Bills and payments are tracked per patient, with partial or excess payments carried into the next cycle as a single running balance rather than a separate correction record.</div>
     </div>
     <div class="skill-card">
       <div class="skill-title">Role-Based Access</div>
@@ -225,10 +225,7 @@
 <div class="sec">
   <div class="eyebrow">Business Outcomes</div>
   <div class="sec-title">A clinic that could see its own numbers for the first time</div>
-  <div class="body">The clinic was losing patients to long, untracked waits, and had no reliable way to track who owed
-    what — many patients could only pay bills partially, and reconciling that by hand was slow and error-prone. The
-    system shipped to Care Plus Clinic and stayed in active use for about two years while I supported it; the figures
-    below are the clinic's own before/after comparison over that period, not an independently audited study.</div>
+  <div class="body">The clinic was losing patients to long, untracked waits, and had no reliable way to track who owed what. The system shipped to Care Plus Clinic and stayed in active use for about two years while I supported it; the figures below are the clinic's own before/after comparison over that period, not an independently audited study.</div>
   <div class="impact-metrics">
     <div class="impact-metric">
       <div class="impact-number">60%</div>
@@ -246,7 +243,7 @@
       <div class="impact-number">30%</div>
       <div style="font-size:10px;font-weight:700;color:#71717a;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px">Observed</div>
       <div class="impact-metric-title">Increase in patient retention</div>
-      <div class="impact-metric-body">Reported by the clinic after the wait-time and billing issues were addressed, over roughly two years of use.</div>
+      <div class="impact-metric-body">Reported by the clinic after the wait-time and billing issues were addressed.</div>
     </div>
   </div>
 </div>
@@ -255,7 +252,7 @@
 <div class="sec sec-bg">
   <div class="eyebrow">Constraints &amp; What I'd Add</div>
   <div class="sec-title">What this project didn't cover</div>
-  <div class="body">The clinic's doctor and receptionist used the system daily for about two years, and the doctor credited it with replacing a slow, error-prone spreadsheet process for billing reconciliation, feedback that was qualitative rather than based on a formal study.</div>
+  <!--<div class="body">The clinic's doctor and receptionist used the system daily for about two years, and the doctor credited it with replacing a slow, error-prone spreadsheet process for billing reconciliation, feedback that was qualitative rather than based on a formal study.</div>-->
   <div class="body">Because this was a single-person build for one small clinic, the design wasn't validated across a larger or more diverse set of clinical workflows.</div>  
 </div>
 

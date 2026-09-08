@@ -540,6 +540,9 @@
 </style>
 </head>
 <script>
+  document.addEventListener('contextmenu', (e) => {
+  if (e.target.tagName === 'IMG') e.preventDefault();
+});
   document.addEventListener('DOMContentLoaded', function () {
   
     const emailButton = document.querySelector('.connect-email');
